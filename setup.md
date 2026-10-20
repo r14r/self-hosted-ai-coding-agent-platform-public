@@ -28,3 +28,5 @@ Projektwebseite: http://127.0.0.1:4000/self-hosted-ai-coding-agent-platform-publ
 Für die Online-Veröffentlichung in den Repository-Einstellungen unter **Pages → Build and deployment → Source → GitHub Actions** wählen. Die Action `Deploy Jekyll site` baut und publiziert den Repository-Stammverzeichnis.
 
 **Hinweis:** GitHub Pages ist eine öffentlich zugängliche Website, auch bei einem privaten Quellrepository.
+
+{% include glossary.md %}

@@ -17,3 +17,5 @@ permalink: /workflow/
 8. Human Review und Freigabe.
 
 Ein fehlgeschlagener Pflicht-Test kann nicht durch eine positive LLM-Bewertung überstimmt werden.
+
+{% include glossary.md %}
