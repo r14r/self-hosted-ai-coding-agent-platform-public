@@ -21,3 +21,5 @@ permalink: /roadmap/
 Ein Repository wird analysiert, die Wartungsaufgabe in einer Sandbox ausgeführt, unabhängig validiert und als Pull Request zur Prüfung erstellt. Der Agent hat niemals die Berechtigung, geschützte Branches selbst zu mergen.
 
 **Aktuell vorhanden:** Compose, FastAPI-Grundgerüst, optionale Gitea-/Ollama-Dienste, statische Landing Page und CI. Die nachfolgenden Funktionalitäten sind noch nicht implementiert.
+
+{% include glossary.md %}

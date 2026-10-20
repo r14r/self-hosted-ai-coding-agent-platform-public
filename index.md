@@ -19,3 +19,5 @@ Eine modular aufgebaute Self-Hosted-Plattform für Git-Repositories: Wartungsbed
 - **Human in the loop:** Ein Mensch prüft den Pull Request vor dem Merge.
 
 [Architektur]({{ '/architecture/' | relative_url }}) · [Workflow]({{ '/workflow/' | relative_url }}) · [Roadmap]({{ '/roadmap/' | relative_url }})
+
+{% include glossary.md %}

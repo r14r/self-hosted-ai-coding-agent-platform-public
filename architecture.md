@@ -24,3 +24,5 @@ Unabhängige Build-/Test-/SAST-/SCA-/Secret-Prüfungen und Delta-Vergleiche stat
 GitHub und Gitea über Provider Adapter. PR-Publisher verwaltet kurzlebige Tokens und darf nur eigene Wartungsbranches schreiben. Keine automatischen Merges geschützter Branches.
 
 Ausführliche Details: [docs/README.md](https://github.com/r14r/self-hosted-ai-coding-agent-platform/blob/main/docs/README.md).
+
+{% include glossary.md %}

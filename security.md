@@ -21,3 +21,5 @@ Repository-Code, README, Issues, Dependencies, Shell-Ausgaben und Agentenantwort
 - Traces und Logs mit Secret Redaction.
 
 **Hinweis:** Diese Kontrollen sind Teil der geplanten Zielarchitektur und noch nicht vollständig implementiert.
+
+{% include glossary.md %}
