@@ -3,30 +3,51 @@ layout: default
 title: Installation
 permalink: /setup/
 ---
-# Lokale Installation
+
+## 7. Docker Compose — Istzustand und lokaler Start
+
+Im privaten Anwendungsrepository liegt die ausführbare Grundlage unter `compose.yaml`: `backend`, `frontend` (statisch), `postgres`, `redis`; optionale Profile für `ollama` und `gitea`. Die ursprünglich diskutierte vollständige Serviceaufteilung ist **eine Zielkonfiguration, keine bereits lauffähige Compose-Datei**.
 
 ```bash
 git clone https://github.com/r14r/self-hosted-ai-coding-agent-platform.git
 cd self-hosted-ai-coding-agent-platform
 just bootstrap
-# Passwort in .env ändern
+# POSTGRES_PASSWORD in .env vor dem Start ändern
 just setup
+just test
+just build
 just run
+just open
 ```
 
-Lokale Endpunkte: [Dashboard](http://localhost:3000) und [FastAPI Docs](http://localhost:8000/docs). Optional: `just ai-up` und `just git-up`.
+Weitere Workflows: `just doctor`, `just logs`, `just down`, `just ai-up`, `just git-up`, `just model-pull MODEL`, `just precommit` und `just ci`. Für `update-cli` sind `bootstrap`, `setup`, `test`, `build`, `install`, `run`, `open` und `update` vorgesehen. Die Schema-10-Kompatibilität von `update-cli.yaml` ist mit der lokal installierten CLI zu prüfen.
 
-## Jekyll lokal starten
+Für produktive Szenarien: Versionen/Digests pinnen, Secrets von `.env` trennen, Backups und Healthchecks ergänzen und isolierte Runner/VMs bereitstellen.
 
-```bash
-bundle install
-bundle exec jekyll serve
+### Geplantes Monorepo
+
+```text
+VERSION · README.md · AGENTS.md · SOURCE.md · update-cli.yaml · justfile
+compose.yaml · compose.ai.yaml · compose.git.yaml · compose.monitoring.yaml
+services/{frontend,backend,orchestrator,worker,sandbox-executor}
+packages/{agent-core,agent-adapters,git-providers,validators,policy-engine,sandbox-providers}
+config/{litellm.yaml,agents,policies,workflows,repository-profiles}
+sandboxes/{python,go,node,generic}
+tests/{unit,integration,e2e,evaluations,security}
+fixtures/{vulnerable-python-app,broken-go-service,outdated-node-app}
+docs/assets/
 ```
 
-Projektwebseite: http://127.0.0.1:4000/self-hosted-ai-coding-agent-platform-public/
+Diese Struktur ist die **Zielstruktur**; fehlende Verzeichnisse dürfen nicht als implementiert ausgegeben werden.
 
-Für die Online-Veröffentlichung in den Repository-Einstellungen unter **Pages → Build and deployment → Source → GitHub Actions** wählen. Die Action `Deploy Jekyll site` baut und publiziert den Repository-Stammverzeichnis.
+## 13. Jekyll / GitHub Pages
 
-**Hinweis:** GitHub Pages ist eine öffentlich zugängliche Website, auch bei einem privaten Quellrepository.
+Die öffentlich lesbare Dokumentations-Website liegt separat unter [self-hosted-ai-coding-agent-platform-public](https://github.com/r14r/self-hosted-ai-coding-agent-platform-public). Dort baut der GitHub-Actions-Workflow Jekyll und publiziert nach Freigabe der Repository-Einstellung **Settings → Pages → Source: GitHub Actions**.
+
+Website (nach erfolgreichem Deployment): https://r14r.github.io/self-hosted-ai-coding-agent-platform-public/
+
+Nur öffentlich freigegebene Projektbeschreibungen, Diagramme und Demonstrationsdaten gehören in das Pages-Repository; keine Zugangsdaten oder proprietären Codeinhalte.
+
+[**Zur vollständigen Projektdokumentation**]({{ '/documentation/' | relative_url }})
 
 {% include glossary.md %}
