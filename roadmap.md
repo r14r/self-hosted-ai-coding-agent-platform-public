@@ -75,4 +75,8 @@ Es sind zwei Betriebsmodi geplant: **lokaler Demo-Modus** mit Gitea, Ollama und 
 
 Maintenance Task Backlog, Review-Status, Audit-Trail und versionierte Migrationen sind im Anwendungsrepository implementiert. Details: [Maintenance Tasks]({{ '/maintenance-tasks/' | relative_url }}). Die Aufgabe-Freigabe startet noch keinen Agentenjob; Nuxt, Job Queue und Sandbox bleiben geplant.
 
+## Anwendungsstand v0.5.0
+
+Preflight-Orchestrator, Redis-Wakeup, persistente Runs und Audit-Ereignisse implementiert. [Dokumentation]({{ '/orchestrator/' | relative_url }}). OpenCode/Sandbox und produktive Validation bleiben geplant.
+
 {% include glossary.md %}
