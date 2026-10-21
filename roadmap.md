@@ -79,4 +79,8 @@ Maintenance Task Backlog, Review-Status, Audit-Trail und versionierte Migratione
 
 Preflight-Orchestrator, Redis-Wakeup, persistente Runs und Audit-Ereignisse implementiert. [Dokumentation]({{ '/orchestrator/' | relative_url }}). OpenCode/Sandbox und produktive Validation bleiben geplant.
 
+## Testkorrektur v0.5.1
+
+Die Unit-Tests laufen jetzt im Python-3.12-Backend-Image und vermeiden fehlende Host-Abhängigkeiten. Die Workflow-Erkennungs-Tests wurden korrigiert. [Details]({{ '/testing/' | relative_url }}).
+
 {% include glossary.md %}
