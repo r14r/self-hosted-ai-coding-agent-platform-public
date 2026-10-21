@@ -332,3 +332,8 @@ Nur öffentlich freigegebene Projektbeschreibungen, Diagramme und Demonstrations
 ## Meilenstein v0.5.0
 
 [Orchestrator](orchestrator.md): persistente sichere Preflight-Runs mit Redis und PostgreSQL; noch keine Agenten-Ausführung.
+
+
+## Test Fix v0.5.1
+
+Siehe [Testumgebung](testing.md) für reproduzierbare Docker-basierte Unit-Tests und Workflow-Erkennung.

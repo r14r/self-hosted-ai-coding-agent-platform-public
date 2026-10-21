@@ -6,7 +6,7 @@ permalink: /documentation/
 
 # Self-Hosted AI Coding Agent Platform — Vollständige technische Konzeption
 
-> **Anwendungsstand 0.5.0 · Zielarchitektur und Roadmap, keine produktiv einsatzbereite Agentenplattform.** Das aktuelle Compose-Projekt stellt lediglich FastAPI, eine statische Startseite, PostgreSQL, Redis sowie optionale Ollama-/Gitea-Dienste bereit. Alles als *geplant* Kennzeichnete existiert noch nicht als lauffähige Funktion.
+> **Anwendungsstand 0.5.1 · Zielarchitektur und Roadmap, keine produktiv einsatzbereite Agentenplattform.** Das aktuelle Compose-Projekt stellt lediglich FastAPI, eine statische Startseite, PostgreSQL, Redis sowie optionale Ollama-/Gitea-Dienste bereit. Alles als *geplant* Kennzeichnete existiert noch nicht als lauffähige Funktion.
 
 # Maintenance Task Management (v0.4.0)
 
@@ -110,6 +110,20 @@ docker compose -f compose.yaml logs -f orchestrator
 Die maximale Anzahl von Versuchen ist derzeit als Datenfeld erfasst, aber automatische Retries sind **noch nicht implementiert**. Bei Neustart werden vorher laufende Jobs zur Sicherheit als fehlgeschlagen markiert. Kein Task wird automatisch erneut ausgeführt. Der Worker ist zunächst für eine einzelne Instanz vorgesehen. Vor dem Einsatz mehrerer Worker müssen Lease-/Heartbeat-Regeln und eine differenzierte Recovery ergänzt werden.
 
 Das bisherige Frontend ist weiterhin statisches HTML; eine vollständige Nuxt-4-Anwendung ist noch nicht implementiert. Auch echte Jobdauer/Timeout-Tests gegen PostgreSQL und Redis sowie Docker-End-to-End-Prüfungen sind noch ausstehend.
+
+## Testkorrektur v0.5.1
+
+`just test` startet die Unit-Tests im **Backend-Docker-Image (Python 3.12)** und verwendet exakt dessen `requirements.txt`-Abhängigkeiten, einschließlich `asyncpg` und `redis`. Es installiert keine Pakete in das lokale Homebrew-Python (auch nicht Python 3.15). Die Tests werden als Read-only-Bind-Mount in den Container eingebunden, ohne PostgreSQL/Gitea/Ollama starten zu müssen.
+
+Der fehlerhafte `.github/workflows`-Test-Mock wurde korrigiert: Er antwortete auf das übergeordnete Verzeichnis, bevor das spezifische Workflow-Verzeichnis geprüft wurde. Ein zusätzlicher Test deckt `.gitea/workflows` ab. Die produktive Erkennung dieser beiden Pfade war bereits vorhanden.
+
+```bash
+git pull
+just test
+just build
+```
+
+Benötigt werden Docker Engine/Compose, `just` und eine gültige `.env`. Der erstmalige Backend-Image-Build kann Pakete herunterladen. `just test` schlägt bei fehlgeschlagenen Tests unverändert mit einem Fehlercode fehl.
 
 ## 1. Zielsetzung und Rahmenbedingungen
 
