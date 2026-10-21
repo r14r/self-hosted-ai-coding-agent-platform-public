@@ -322,3 +322,8 @@ Nur öffentlich freigegebene Projektbeschreibungen, Diagramme und Demonstrations
 | UI | User Interface – Benutzeroberfläche | [MDN – UI](https://developer.mozilla.org/en-US/docs/Glossary/UI) |
 | VM | Virtual Machine – virtualisierter, vom Host abgegrenzter Rechner | [Red Hat – VM](https://www.redhat.com/en/topics/virtualization/what-is-a-virtual-machine) |
 | YAML | YAML Ain't Markup Language – lesbares Konfigurationsformat | [YAML](https://yaml.org/) |
+
+
+## Aktueller Stand (App v0.4.0)
+
+[Maintenance Tasks](maintenance-tasks.md) beschreibt Task-Import, Review und Audit-Historie. Eine Freigabe führt keinen Coding Agent aus.
