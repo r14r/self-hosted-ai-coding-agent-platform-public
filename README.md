@@ -327,3 +327,8 @@ Nur öffentlich freigegebene Projektbeschreibungen, Diagramme und Demonstrations
 ## Aktueller Stand (App v0.4.0)
 
 [Maintenance Tasks](maintenance-tasks.md) beschreibt Task-Import, Review und Audit-Historie. Eine Freigabe führt keinen Coding Agent aus.
+
+
+## Meilenstein v0.5.0
+
+[Orchestrator](orchestrator.md): persistente sichere Preflight-Runs mit Redis und PostgreSQL; noch keine Agenten-Ausführung.
