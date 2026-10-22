@@ -342,3 +342,16 @@ Siehe [Testumgebung](testing.md) für reproduzierbare Docker-basierte Unit-Tests
 ## Installationskorrektur v0.5.2
 
 [Update CLI und install](update-cli-install.md) erklärt die verfügbaren Recipes, Manifest-Workflows und Update-CLI-current-Verzeichnisse.
+
+
+## Jekyll-Template
+
+Das Layout basiert auf [r14r/github-pages-for-documentation-template](https://github.com/r14r/github-pages-for-documentation-template) mit Minimal Mistakes, linker verschachtelter Navigation, aktivem rotem Seitenindikator und feststehender rechter Inhaltsübersicht (ScrollSpy). Die projektspezifische `baseurl` bleibt `/self-hosted-ai-coding-agent-platform-public`. Dokumentationsseiten liegen im Repository-Root und verwenden `layout: single`.
+
+```sh
+bundle install
+bundle exec jekyll build --strict_front_matter --destination _site
+just run
+```
+
+Der GitHub-Pages-Workflow deployt weiterhin `_site` über GitHub Actions. Die Dokumentationsinhalte wurden übernommen; alte eigene Layout- und ScrollSpy-Dateien entfernt.

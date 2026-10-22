@@ -1,7 +1,0 @@
-.layout--single .sidebar__right.sticky {position:sticky;top:1.5rem;align-self:start}
-.layout--single .sidebar__right .toc__menu {max-height:calc(100vh - 7rem);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
-.layout--single .sidebar__right .toc__menu a {border-left:3px solid transparent;transition:color .15s,background-color .15s,border-color .15s}
-.layout--single .sidebar__right .toc__menu a.is-active,.layout--single .sidebar__right .toc__menu a[aria-current='location'] {border-left-color:#dc2626;color:#b91c1c;font-weight:700;background:#fff1f2}
-.layout--single .sidebar .nav__list li.active>a,.layout--single .sidebar .nav__list .active>a,.layout--single .sidebar .nav__list a[aria-current='page'] {border-left:4px solid #dc2626;color:#b91c1c;background:#fff1f2}
-.layout--single .page__content h2[id],.layout--single .page__content h3[id],.layout--single .page__content h4[id] {scroll-margin-top:7rem}
-@media(max-width:1023px){.layout--single .sidebar__right.sticky{position:static}}
