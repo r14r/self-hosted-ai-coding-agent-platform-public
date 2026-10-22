@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: single
 title: Update CLI und Installation
 permalink: /update-cli-install/
 ---
