@@ -337,3 +337,8 @@ Nur öffentlich freigegebene Projektbeschreibungen, Diagramme und Demonstrations
 ## Test Fix v0.5.1
 
 Siehe [Testumgebung](testing.md) für reproduzierbare Docker-basierte Unit-Tests und Workflow-Erkennung.
+
+
+## Installationskorrektur v0.5.2
+
+[Update CLI und install](update-cli-install.md) erklärt die verfügbaren Recipes, Manifest-Workflows und Update-CLI-current-Verzeichnisse.
