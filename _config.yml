@@ -1,10 +1,29 @@
 title: Self-Hosted AI Coding Agent Platform
-description: Local-first agentic software maintenance with independent validation and human review
-url: https://r14r.github.io
-baseurl: /self-hosted-ai-coding-agent-platform-public
+description: Documentation for the self-hosted AI coding agent platform
+url: "https://r14r.github.io"
+baseurl: "/self-hosted-ai-coding-agent-platform-public"
+locale: en
 markdown: kramdown
-permalink: pretty
+highlighter: rouge
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: default
+search: true
+plugins:
+  - jekyll-include-cache
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: single
+      toc: true
+      toc_label: "On this page"
+      toc_sticky: true
+      sidebar:
+        nav: docs
 exclude:
-  - README.md
   - Gemfile
   - Gemfile.lock
+  - justfile
+  - README.md
+  - vendor
+  - .bundle

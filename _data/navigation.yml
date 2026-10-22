@@ -1,0 +1,32 @@
+main:
+  - title: Documentation
+    url: /
+docs:
+  - title: Overview
+    children:
+      - title: Home
+        url: /
+      - title: Architecture
+        url: /architecture/
+      - title: Workflow
+        url: /workflow/
+      - title: Security
+        url: /security/
+      - title: Roadmap
+        url: /roadmap/
+  - title: Implementation
+    children:
+      - title: Maintenance Tasks
+        url: /maintenance-tasks/
+      - title: Orchestrator
+        url: /orchestrator/
+      - title: Tests
+        url: /testing/
+  - title: Operations
+    children:
+      - title: Update CLI
+        url: /update-cli-install/
+      - title: Setup
+        url: /setup/
+      - title: Documentation
+        url: /documentation/
