@@ -355,3 +355,8 @@ just run
 ```
 
 Der GitHub-Pages-Workflow deployt weiterhin `_site` über GitHub Actions. Die Dokumentationsinhalte wurden übernommen; alte eigene Layout- und ScrollSpy-Dateien entfernt.
+
+
+## Integration v0.5.4
+
+[Integrations- und Startbereitschaftstests](integration.md) dokumentiert die neuen Healthchecks, Smoke-Prüfungen und ihre Grenzen.

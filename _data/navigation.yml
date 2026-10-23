@@ -22,6 +22,8 @@ docs:
         url: /orchestrator/
       - title: Tests
         url: /testing/
+      - title: Integration v0.5.4
+        url: /integration/
   - title: Operations
     children:
       - title: Update CLI
