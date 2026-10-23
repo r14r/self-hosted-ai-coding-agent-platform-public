@@ -24,6 +24,8 @@ docs:
         url: /testing/
       - title: Integration v0.5.4
         url: /integration/
+      - title: OpenCode v0.6.0
+        url: /opencode-adapter/
   - title: Operations
     children:
       - title: Update CLI
