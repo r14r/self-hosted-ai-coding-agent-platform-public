@@ -34,3 +34,8 @@ docs:
         url: /setup/
       - title: Documentation
         url: /documentation/
+
+  - title: CI/CD und AI Actions
+    children:
+      - title: Gitea Actions bei Commits
+        url: /commit-actions/
