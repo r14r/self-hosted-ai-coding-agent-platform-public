@@ -39,3 +39,8 @@ docs:
     children:
       - title: Gitea Actions bei Commits
         url: /commit-actions/
+
+  - title: Lokale Entwicklung
+    children:
+      - title: CI und Branch-Test
+        url: /local-ci/
